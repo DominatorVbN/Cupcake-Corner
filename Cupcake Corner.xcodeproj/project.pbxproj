@@ -30,6 +30,7 @@
 		832FCA4423A162D300B367FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		832FCA4723A162D300B367FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		832FCA4923A162D300B367FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8361707323A64B760064C711 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		832FCA2F23A162D100B367FE = {
 			isa = PBXGroup;
 			children = (
+				8361707323A64B760064C711 /* README.md */,
 				832FCA3A23A162D100B367FE /* Cupcake Corner */,
 				832FCA3923A162D100B367FE /* Products */,
 			);
