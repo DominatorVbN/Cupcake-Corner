@@ -33,4 +33,25 @@ class Order: ObservableObject{
     var hasValidAddress: Bool{
         !(name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty)
     }
+    
+    var cost: Double{
+        
+        //2$ per cake
+        var cost = Double(quantity) * 2
+        
+        //complicated cake cost more
+        cost += Double(type)/2
+        
+        //$1 per cake for extra frosting
+        if extraFrosting{
+            cost += Double(quantity)
+        }
+        
+        // 50 cents per cake for extra sprinkled
+        if extraSpriklss{
+            cost += Double(quantity)/2
+        }
+        
+        return cost
+    }
 }
