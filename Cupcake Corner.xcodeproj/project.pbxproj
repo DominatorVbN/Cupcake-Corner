@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832D049623A61BB200B7F673 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D049523A61BB200B7F673 /* Order.swift */; };
+		832D049823A624B300B7F673 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832D049723A624B300B7F673 /* AddressView.swift */; };
 		832FCA3C23A162D100B367FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FCA3B23A162D100B367FE /* AppDelegate.swift */; };
 		832FCA3E23A162D100B367FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FCA3D23A162D100B367FE /* SceneDelegate.swift */; };
 		832FCA4023A162D100B367FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FCA3F23A162D100B367FE /* ContentView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		832D049523A61BB200B7F673 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		832D049723A624B300B7F673 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		832FCA3823A162D100B367FE /* Cupcake Corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cupcake Corner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FCA3B23A162D100B367FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		832FCA3D23A162D100B367FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		832D049423A61BA300B7F673 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				832D049523A61BB200B7F673 /* Order.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		832FCA2F23A162D100B367FE = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 		832FCA3A23A162D100B367FE /* Cupcake Corner */ = {
 			isa = PBXGroup;
 			children = (
+				832D049423A61BA300B7F673 /* Model */,
 				832FCA3B23A162D100B367FE /* AppDelegate.swift */,
 				832FCA3D23A162D100B367FE /* SceneDelegate.swift */,
 				832FCA3F23A162D100B367FE /* ContentView.swift */,
@@ -63,6 +76,7 @@
 				832FCA4623A162D300B367FE /* LaunchScreen.storyboard */,
 				832FCA4923A162D300B367FE /* Info.plist */,
 				832FCA4323A162D300B367FE /* Preview Content */,
+				832D049723A624B300B7F673 /* AddressView.swift */,
 			);
 			path = "Cupcake Corner";
 			sourceTree = "<group>";
@@ -148,7 +162,9 @@
 			files = (
 				832FCA3C23A162D100B367FE /* AppDelegate.swift in Sources */,
 				832FCA3E23A162D100B367FE /* SceneDelegate.swift in Sources */,
+				832D049623A61BB200B7F673 /* Order.swift in Sources */,
 				832FCA4023A162D100B367FE /* ContentView.swift in Sources */,
+				832D049823A624B300B7F673 /* AddressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,42 +7,42 @@
 //
 
 import SwiftUI
-struct Response: Codable{
-    let results : [Result]
-}
-struct Result: Codable{
-    let trackId: Int
-    let trackName: String
-    let collectionName: String
-}
+
 struct ContentView: View {
-    @State var results = [Result]()
+    @ObservedObject var order = Order()
     var body: some View {
-        List(results, id: \.trackId) { item in
-            VStack(alignment: .leading) {
-                Text(item.trackName)
-                    .font(.headline)
-                Text(item.collectionName)
-            }
-        }.onAppear(perform: loadData)
-    }
-    func loadData(){
-        guard let url = URL(string: "https://itunes.apple.com/search?term=taylor+swift&entity=song") else{
-            print("invalid URl")
-            return
-        }
-        let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data{
-                if let decodedData = try? JSONDecoder().decode(Response.self, from: data){
-                    DispatchQueue.main.async{
-                        self.results = decodedData.results
+        NavigationView{
+            Form{
+                Section{
+                    Picker("Select your cake type", selection: $order.type){
+                        ForEach(0..<Order.types.count, id: \.self) {
+                            Text(Order.types[$0])
+                        }
                     }
-                    return
+                    Stepper("Number of cake \(order.quantity)", value: $order.quantity, in: 3...20)
                 }
-            }
-            print("error",error as Any)
-        }.resume()
+                Section{
+                    Toggle(isOn: $order.specialRequestEnabled.animation()) {
+                        Text("Any special requests?")
+                    }
+                    if order.specialRequestEnabled{
+                        Toggle(isOn: $order.extraFrosting) {
+                            Text("Add extra frosting")
+                        }
+                        
+                        Toggle(isOn: $order.extraSpriklss){
+                            Text("Add extra sprinkles")
+                        }
+                    }
+                }
+                
+                Section{
+                    NavigationLink(destination: AddressView(order: order)) {
+                        Text("Delivery details")
+                    }
+                }
+            }.navigationBarTitle("Cupcake Corner")
+        }
     }
 }
 
