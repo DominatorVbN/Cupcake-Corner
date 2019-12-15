@@ -14,16 +14,16 @@ struct AddressView: View {
         HStack {
             Form{
                 Section{
-                    TextField("Name", text: $order.name)
-                    TextField("Street address", text: $order.streetAddress)
-                    TextField("City", text: $order.city)
-                    TextField("Zip", text: $order.zip)
+                    TextField("Name", text: $order.orderItem.name)
+                    TextField("Street address", text: $order.orderItem.streetAddress)
+                    TextField("City", text: $order.orderItem.city)
+                    TextField("Zip", text: $order.orderItem.zip)
                 }
                 Section {
                     NavigationLink(destination: CheckOutView(order: order)) {
                         Text("Checkout")
                     }
-                }.disabled(!order.hasValidAddress)
+                }.disabled(!order.orderItem.hasValidAddress)
             }
         }.navigationBarTitle("Delivery details", displayMode: .inline)
     }
